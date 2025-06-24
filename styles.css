@@ -1,0 +1,142 @@
+body {
+   background: url("images/background.jpg") no-repeat center center;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+
+  background: url("images/background.jpg") no-repeat center center;
+  background-size: cover;
+
+  padding: 20px;
+  border-radius: 8px;
+  color: #333333;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.container::before {
+  background: url("images/background.jpg") no-repeat center center;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.container > * {
+  background: url("images/background.jpg") no-repeat center center;
+  position: relative;
+  z-index: 1;
+}
+
+header, footer {
+  background: url("images/background.jpg") no-repeat center center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.layout {
+  background: url("images/background.jpg") no-repeat center center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.sidebar {
+  background: url("images/background.jpg") no-repeat center center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.sidebar img {
+   background: url("images/background.jpg") no-repeat center center;
+  width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.sidebar ul {
+     background: url("images/background.jpg") no-repeat center center;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+     background: url("images/background.jpg") no-repeat center center;
+  margin: 10px 0;
+}
+
+.content {
+     background: url("images/background.jpg") no-repeat center center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+table {
+     background: url("images/background.jpg") no-repeat center center;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+table tr:nth-child(even) {
+     background: url("images/background.jpg") no-repeat center center;
+  background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+     background: url("images/background.jpg") no-repeat center center;
+  background-color: #ffffff;
+}
+
+.quote {
+     background: url("images/background.jpg") no-repeat center center;
+  font-style: italic;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-left: 4px solid #888;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+a {
+   
+  color: #0073e6;
+  text-decoration: none;
+}
+
+a:hover {
+     
+  color: darkred;
+  text-decoration: underline;
+}
+
+span {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+}
